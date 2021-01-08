@@ -6,7 +6,7 @@ branchrs:
     - master
 script:
     - echo "Beginning docker build"
-    - docker build -t udgaram-user-api .
+    - docker build -t udagram-user-api .
     - docker tag udagram-user-api renjithtech6/udagram-user-api
 
 after_success:
