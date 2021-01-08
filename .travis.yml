@@ -6,10 +6,10 @@ branchrs:
     - master
 script:
     - echo "Beginning docker build"
-    - docker build -t udagaram-user-api .
-    - docker tag udagaram-user-api renjithtech6/udagaram-user-api
+    - docker build -t udagram-user-api .
+    - docker tag udagram-user-api renjithtech6/udagram-user-api
 
 after_success:
     - echo "About to create container in Docker registry"
     - echo "$D_PSWD" | docker login -u "$D_UNAME" --password-stdin
-    - docker push renjithtech6/udagaram-user-api
+    - docker push renjithtech6/udagram-user-api
